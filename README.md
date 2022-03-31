@@ -2,7 +2,7 @@
 
 ## algo tests
 
-These algo tests use jest to validate their behavior.
+These algos use jest to validate their behavior.
 
 use 
 
