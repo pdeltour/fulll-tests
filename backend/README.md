@@ -10,7 +10,7 @@ To build typescript source code run
     npm run build 
     
 
-## additionnal setup for mysql
+## additional setup for mysql
 
 
 create new schema 'backend-test'
@@ -68,3 +68,21 @@ run
 # Architecture
 ![fulll-test](https://user-images.githubusercontent.com/2302696/161108135-7bcfacd0-abdd-4144-9f30-d28a67080d9e.png)
 
+## Description
+
+Domain expose 2 entities Fleet and Vehicle and one value object Location.
+Domain is isolated from the database driver implementation via an interface IRep. 2 implementations of IRep are defined for a memory database and a Mysql database.
+
+The logic of the domain is implemented in FleetService.
+
+The app layer connects the cucumber test and the cli commands via an App class. This class is responsible for instantiating the correct driver based on the command line parameters and to start / stop the database service.
+
+## Remarks
+
+I assume the following in my understanding of the model.
+
+- user can only have a single fleet
+- vehicles are uniquely identified by their plate number
+- a vehicle has a unique location
+
+ *I should have validated these assumptions with a specialist in the field, which i didn't. My bad*
