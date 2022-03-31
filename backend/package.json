@@ -1,0 +1,27 @@
+{
+  "name": "backend3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./out/src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js -p default ",
+    "build": "./node_modules/typescript/bin/tsc -w",
+    "start": "node ./out/src/App/index.js"
+  },
+  "author": "",
+  "bin": {
+    "fleet": "./out/src/App/index.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.2",
+    "@types/chai": "^4.3.0",
+    "chai": "^4.3.6",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "commander": "^9.1.0",
+    "mysql2": "^2.3.3"
+  }
+}
