@@ -12,11 +12,12 @@ To build typescript source code run
 
 ## additional setup for mysql
 
+setup a mysql server.
 
-create new schema 'backend-test'
-load database structure in /sql/dump.sql
+create new schema 'backend-test'.
+load database structure in /sql/dump.sql .
 
-update connection_uri in tools/run_tests_mysql_database.sh with correct user and password
+update connection_uri in tools/run_tests_mysql_database.sh with correct user and password.
 
 example : mysql://root:pwd@localhost:3306/backend-test
 
@@ -37,6 +38,8 @@ To run memory tests, please use
 run
 
     ./tools/run_tests_mysql_database.sh
+    
+When tests are run, all tables are truncated to setup  clean initial conditions.
 
 # CLI tool
 
