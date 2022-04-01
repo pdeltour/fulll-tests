@@ -3,6 +3,9 @@ import { IRep } from "./IRep";
 import { Vehicle } from "./Vehicle";
 import { Location } from "./Location";
 
+/**
+ *  general services to manage fleet and vehicle
+ */
 export class FleetService {
 
 

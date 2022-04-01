@@ -6,6 +6,9 @@ class VehicleFleetMap extends Map<string, Array<Vehicle>> {
 
 }
 
+/**
+ *  In memory database / repository implementation
+ */
 export class RepMemory implements IRep {
 
     private vehicles: Map<string, Vehicle> = new Map<string, Vehicle>();

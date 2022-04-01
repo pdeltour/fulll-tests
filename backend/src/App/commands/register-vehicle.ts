@@ -2,6 +2,12 @@ import { Command } from "commander";
 import { Vehicle } from "../../Domain/Vehicle";
 import { App } from "../app";
 
+/**
+ * register vehicle command
+ * @param cmd 
+ * @param params 
+ * @returns 
+ */
 export async function registerVehicule(cmd: Command, params: any) {
 
     if (cmd.args.length < 2) {

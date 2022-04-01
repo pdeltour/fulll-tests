@@ -6,9 +6,7 @@ import { assert } from "chai"
 import { Fleet } from "../src/Domain/Fleet";
 import { Vehicle } from "../src/Domain/Vehicle";
 
-
-
-
+//////////////////////////////////////////////////////
 
 Given('my fleet', async function () {
 
@@ -17,14 +15,14 @@ Given('my fleet', async function () {
 
 });
 
-
+//////////////////////////////////////////////////////
 
 Given('a vehicle', async function () {
     this.a_vehicle = new Vehicle("AFK330");
     await this.app.rep.vehicleSave(this.a_vehicle);
 });
 
-
+//////////////////////////////////////////////////////
 
 When('I register this vehicle into my fleet', async function () {
 
@@ -32,7 +30,7 @@ When('I register this vehicle into my fleet', async function () {
 
 });
 
-
+//////////////////////////////////////////////////////
 
 Then('this vehicle should be part of my vehicle fleet', async function () {
 
@@ -40,11 +38,13 @@ Then('this vehicle should be part of my vehicle fleet', async function () {
     assert.isTrue(do_include_vehicle, "vehicle not founded in fleet");
 });
 
+//////////////////////////////////////////////////////
+
 Given('I have registered this vehicle into my fleet', async function () {
     await this.app.fleet_service.fleetRegisterVehicle(this.my_fleet, this.a_vehicle);
 });
 
-
+//////////////////////////////////////////////////////
 
 When('I try to register this vehicle into my fleet', async function () {
     this.already_registered_exception = false;
@@ -56,12 +56,14 @@ When('I try to register this vehicle into my fleet', async function () {
     }
 });
 
-
+//////////////////////////////////////////////////////
 
 Then('I should be informed this this vehicle has already been registered into my fleet', function () {
     assert.isTrue(this.already_registered_exception);
 
 });
+
+//////////////////////////////////////////////////////
 
 Given('the fleet of another user', function () {
 

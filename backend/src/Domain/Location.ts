@@ -1,3 +1,6 @@
+/**
+ * Location: a way to localize on planet earth, like GPS coordinates for example.
+ */
 export class Location {
 
     constructor(public readonly lat: number, public readonly long: number, public readonly alt = 0) {

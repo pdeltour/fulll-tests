@@ -4,17 +4,16 @@ import { Vehicle } from "../Domain/Vehicle";
 import { Connection, createConnection, RowDataPacket } from 'mysql2/promise';
 import { Location } from "../Domain/Location";
 
-const TABLES = [
-    'FLEET'
-]
 
 
+/**
+ *  Mysql repository / database implementation
+ */
 export class RepMysql implements IRep {
 
     private connection: Connection | null = null;
 
     constructor(private connection_uri: string) {
-
 
     }
 

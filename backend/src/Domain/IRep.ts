@@ -1,6 +1,9 @@
 import { Fleet } from "./Fleet";
 import { Vehicle } from "./Vehicle";
 
+/**
+ *  access to the Repository / database service
+ */
 export interface IRep {
 
     /**
@@ -14,7 +17,7 @@ export interface IRep {
     stop(): Promise<void>;
 
     /**
-     * truncate tables 
+     * clean the database data. Useful for cleanup before each test 
      * 
      */
     cleanDatabase(): Promise<void>

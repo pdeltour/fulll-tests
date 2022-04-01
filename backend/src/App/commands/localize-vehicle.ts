@@ -2,6 +2,12 @@ import { Command } from "commander";
 import { Location } from "../../Domain/Location";
 import { App } from "../app";
 
+/**
+ * localize vehicle command
+ * @param cmd 
+ * @param params 
+ * @returns 
+ */
 export async function localizeVehicle(cmd: Command, params: any) {
     //  console.log(cmd.args);
 

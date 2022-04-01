@@ -1,7 +1,12 @@
 import { Command } from "commander";
 import { Fleet } from "../../Domain/Fleet";
 import { App } from "../app";
-
+/**
+ * create fleet command
+ * @param cmd 
+ * @param params 
+ * @returns 
+ */
 export async function create(cmd: Command, params: any): Promise<void> {
 
     if (cmd.args.length < 1) {
