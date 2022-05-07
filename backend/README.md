@@ -88,4 +88,4 @@ I assume the following in my understanding of the model.
 - vehicles are uniquely identified by their plate number
 - a vehicle has a unique location
 
- *I should have validated these assumptions with a specialist in the field, which i didn't. My bad*
+ *I should have validated these assumptions with a field specialist, which i didn't. My bad*
